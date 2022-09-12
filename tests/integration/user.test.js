@@ -21,7 +21,9 @@ describe('User routes', () => {
         role: 'user',
       };
     });
-
+    afterAll(() => {
+      Promise.resolve(1);
+    });
     test('should return 201 and successfully create new user if data is ok', async () => {
       await insertUsers([admin]);
 
